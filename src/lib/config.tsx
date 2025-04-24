@@ -152,7 +152,7 @@ export const siteConfig = {
       answer: (
         <span>
           Yes, Voyentra AI is designed to simplify the travel planning process, making it perfect for both seasoned travelers and first-time adventurers. 
-          With easy-to-follow recommendations and a user-friendly interface, you'll feel confident in planning your trip from start to finish.
+          With easy-to-follow recommendations and a user-friendly interface, you&apos;ll feel confident in planning your trip from start to finish.
         </span>
       ),
     },

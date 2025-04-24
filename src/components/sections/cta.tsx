@@ -21,7 +21,7 @@ export default function CtaSection() {
         >
           <div className="relative z-10 flex flex-col items-center">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[#8A5AFF] to-[#E06A9C] bg-clip-text text-transparent pb-2">Ready for a stress-free trip?</h2>
-            <p className="text-base md:text-xl mb-8 text-gray-500">Plan your next trip in minutes. It's free to get started.</p>
+            <p className="text-base md:text-xl mb-8 text-gray-500">Plan your next trip in minutes. It&apos;s free to get started.</p>
             <Link
               href="http://localhost:3001/auth/sign-up"
               className={cn(

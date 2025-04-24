@@ -74,7 +74,7 @@ const testimonials = [
     role: "CEO @TechStart",
     description: (
       <p>
-        <Highlight>Transformative platform!</Highlight> Our team's efficiency 
+        <Highlight>Transformative platform!</Highlight> Our team&apos;s efficiency 
         doubled within weeks of implementation.
       </p>
     ),
@@ -84,7 +84,7 @@ const testimonials = [
     role: "CTO @InnovateX",
     description: (
       <p>
-        The <Highlight>easiest integration</Highlight> we've ever experienced. 
+        The <Highlight>easiest integration</Highlight> we&apos;ve ever experienced. 
         Reduced deployment time from weeks to days.
       </p>
     ),
