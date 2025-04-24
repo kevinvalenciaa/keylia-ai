@@ -14,55 +14,14 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Eye, EyeOff } from "lucide-react";
-import { useAuth } from "@/contexts/auth-context";
-import { useRouter } from "next/navigation";
-import { useToast } from "@/components/ui/use-toast";
 
 export default function LoginForm() {
   const [showPassword, setShowPassword] = useState(false);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  
-  const { signIn } = useAuth();
-  const router = useRouter();
-  const { toast } = useToast();
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-    
-    try {
-      const { error } = await signIn(email, password);
-      
-      if (error) {
-        toast({
-          title: "Error signing in",
-          description: error.message,
-          variant: "destructive",
-        });
-      } else {
-        toast({
-          title: "Success!",
-          description: "You are now signed in.",
-        });
-        router.push('/'); // Redirect to home page
-      }
-    } catch (error: any) {
-      toast({
-        title: "Error signing in",
-        description: error.message,
-        variant: "destructive",
-      });
-    } finally {
-      setIsLoading(false);
-    }
-  };
-   
+  
   return (
     <Card className="mx-auto max-w-sm">
       <CardHeader>
@@ -72,7 +31,7 @@ export default function LoginForm() {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <form onSubmit={handleSubmit} className="grid gap-4">
+        <div className="grid gap-4">
           {/* 
           <Button variant="outline" className="w-full">
             <Icons.google className="w-4 h-4 mr-2" />
@@ -101,14 +60,12 @@ export default function LoginForm() {
               type="email"
               placeholder="m@example.com"
               required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="grid gap-2">
             <div className="flex items-center">
               <Label htmlFor="password">Password</Label>
-              <Link href="/reset-password" className="ml-auto inline-block text-sm underline">
+              <Link href="#" className="ml-auto inline-block text-sm underline">
                 Forgot your password?
               </Link>
             </div>
@@ -118,8 +75,6 @@ export default function LoginForm() {
                 type={showPassword ? "text" : "password"}
                 className="pr-10" 
                 required 
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
               />
               <button
                 type="button"
@@ -134,16 +89,16 @@ export default function LoginForm() {
               </button>
             </div>
           </div>
-          <Button type="submit" className="w-full" disabled={isLoading}>
-            {isLoading ? "Signing in..." : "Login"}
+          <Button type="submit" className="w-full">
+            Login
           </Button>
-          <div className="mt-4 text-center text-sm">
-            Don&apos;t have an account?{" "}
-            <Link href="/signup" className="underline">
-              Sign up
-            </Link>
-          </div>
-        </form>
+        </div>
+        <div className="mt-4 text-center text-sm">
+          Don&apos;t have an account?{" "}
+          <Link href="/signup" className="underline">
+            Sign up
+          </Link>
+        </div>
       </CardContent>
     </Card>
   );

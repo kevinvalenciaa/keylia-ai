@@ -115,7 +115,7 @@ function HeroCTA() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8, duration: 0.8, ease }}
       >
-        <Link href="/signup">
+        <Link href="http://localhost:3001/auth/sign-up">
           <InteractiveHoverButton>
             Plan My Trip
           </InteractiveHoverButton>
@@ -246,7 +246,7 @@ export default function Hero2() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8, duration: 0.8, ease }}
               >
-                <Link href="/signup">
+                <Link href="http://localhost:3001/auth/sign-up">
                   <InteractiveHoverButton>
                     Plan My Trip
                   </InteractiveHoverButton>

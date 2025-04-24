@@ -23,7 +23,7 @@ export default function CtaSection() {
             <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[#8A5AFF] to-[#E06A9C] bg-clip-text text-transparent pb-2">Ready for a stress-free trip?</h2>
             <p className="text-base md:text-xl mb-8 text-gray-500">Plan your next trip in minutes. It's free to get started.</p>
             <Link
-              href="/signup"
+              href="http://localhost:3001/auth/sign-up"
               className={cn(
                 buttonVariants({ variant: "default" }),
                 "w-full sm:w-auto text-white bg-gradient-to-r from-[#8A5AFF] to-[#E06A9C] hover:opacity-90 flex px-12 py-6 text-xl font-semibold rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
