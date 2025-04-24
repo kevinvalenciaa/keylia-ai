@@ -1,4 +1,6 @@
 import { ThemeProvider } from "@/components/theme-provider";
+import { AuthProvider } from "@/contexts/auth-context";
+import { Toaster } from "@/components/ui/toaster";
 import { cn, constructMetadata } from "@/lib/utils";
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
@@ -34,7 +36,10 @@ export default function RootLayout({
           defaultTheme="light"
           enableSystem={false}
         >
-          {children}
+          <AuthProvider>
+            {children}
+          </AuthProvider>
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
