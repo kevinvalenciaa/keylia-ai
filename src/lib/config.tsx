@@ -162,7 +162,7 @@ export const siteConfig = {
       title: "Product",
       links: [
         { href: "#", text: "Features", icon: null },
-        { href: "#", text: "Pricing", icon: null },
+        { href: "/pricing", text: "Pricing", icon: null },
         { href: "#", text: "Documentation", icon: null },
       ],
     },
