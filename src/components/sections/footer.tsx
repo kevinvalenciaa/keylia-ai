@@ -7,14 +7,14 @@ export default function Footer() {
   return (
     <footer>
       <div className="max-w-6xl mx-auto py-16 sm:px-10 px-5 pb-0">
-        <a
+        <Link
           href="/"
           title={siteConfig.name}
           className="relative mr-6 flex items-center space-x-2"
         >
-          <Icons.logo className="w-auto h-[40px]" />
+          <img src="/Logo 1.png" alt="Logo" className="w-auto h-[40px]" />
           <span className="font-bold text-xl">{siteConfig.name}</span>
-        </a>
+        </Link>
 
         <div className="grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 mt-8">
           {siteConfig.footer.map((section, index) => (

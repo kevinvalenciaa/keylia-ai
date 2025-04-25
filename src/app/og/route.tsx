@@ -40,7 +40,9 @@ export async function GET(req: NextRequest) {
             top: "125px",
           }}
         >
-          <Icons.logo
+          <img 
+            src="/Logo 1.png" 
+            alt="Logo"
             style={{
               width: "64px",
               height: "64px",

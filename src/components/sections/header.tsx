@@ -42,11 +42,11 @@ export default function Header() {
       <div className="flex justify-between items-center container">
         <Link
           href="/"
-          title="brand-logo"
+          title={siteConfig.name}
           className="relative mr-6 flex items-center space-x-2"
         >
-          <Icons.logo className="w-auto h-[40px]" />
-          <span className="font-bold text-xl">{siteConfig.name}</span>
+          <img src="/Logo 1.png" alt="Logo" className="w-auto h-[40px]" />
+          <span className="text-lg font-bold">{siteConfig.name}</span>
         </Link>
 
         <div className="hidden lg:block">
