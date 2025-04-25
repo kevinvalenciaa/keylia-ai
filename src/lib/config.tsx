@@ -12,10 +12,10 @@ export const siteConfig = {
   keywords: ["SaaS", "Template", "Next.js", "React", "Tailwind CSS"],
   links: {
     email: "support@voyentra.ai",
-    twitter: "https://twitter.com/magicuidesign",
-    discord: "https://discord.gg/87p2vpsat5",
-    github: "https://github.com/magicuidesign/magicui",
-    instagram: "https://instagram.com/magicuidesign/",
+    twitter: "",
+    discord: "",
+    github: "",
+    instagram: "",
   },
   header: [
     {
