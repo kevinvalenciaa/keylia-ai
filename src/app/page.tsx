@@ -6,7 +6,7 @@ import Footer from "@/components/sections/footer";
 import Header from "@/components/sections/header";
 import Hero from "@/components/sections/hero";
 import HowItWorks from "@/components/sections/how-it-works";
-import Logos from "@/components/sections/logos";
+// import Logos from "@/components/sections/logos";
 import Pricing from "@/components/sections/pricing";
 import Problem from "@/components/sections/problem";
 import Solution from "@/components/sections/solution";
@@ -19,7 +19,7 @@ export default function Home() {
       <Header />
       <main className="w-full overflow-x-hidden pt-10">
         <Hero />
-        <Logos />
+        {/* <Logos /> */}
         <Problem />
         <Solution />
         {/* Commented out How It Works section */}

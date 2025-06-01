@@ -141,7 +141,7 @@ function HeroImage() {
     >
       <div className="relative">
         <img
-          src="/Untitled design.png"
+          src="/Chat bot-amico.png"
           alt="Voyentra Travel Assistant"
           className="w-full max-w-lg h-auto"
           style={{ 
@@ -153,9 +153,9 @@ function HeroImage() {
           className="absolute inset-0 mix-blend-color pointer-events-none"
           style={{
             background: 'linear-gradient(to bottom left, rgba(168, 85, 247, 0.85), rgba(236, 72, 153, 0.75), rgba(99, 102, 241, 0.65))',
-            maskImage: 'url("/Untitled design.png")',
+            maskImage: 'url("/Chat bot-amico.png")',
             maskSize: '100% 100%',
-            WebkitMaskImage: 'url("/Untitled design.png")',
+            WebkitMaskImage: 'url("/Chat bot-amico.png")',
             WebkitMaskSize: '100% 100%',
           }}
         />
@@ -163,9 +163,9 @@ function HeroImage() {
           className="absolute inset-0 mix-blend-soft-light pointer-events-none"
           style={{
             background: 'linear-gradient(45deg, rgba(168, 85, 247, 0.9), rgba(236, 72, 153, 0.8))',
-            maskImage: 'url("/Untitled design.png")',
+            maskImage: 'url("/Chat bot-amico.png")',
             maskSize: '100% 100%',
-            WebkitMaskImage: 'url("/Untitled design.png")',
+            WebkitMaskImage: 'url("/Chat bot-amico.png")',
             WebkitMaskSize: '100% 100%',
           }}
         />
@@ -177,22 +177,16 @@ function HeroImage() {
 export default function Hero2() {
   return (
     <section id="hero" className="relative pb-0 overflow-visible">
-      {/* Global gradient background that extends across sections */}
-      <div className="fixed inset-0 -z-10 bg-gradient-to-b from-purple-100/40 via-pink-50/30 to-white/20 pointer-events-none"></div>
+      {/* Global gradient background that only covers the hero content area */}
+      <div className="absolute inset-0 top-0 bottom-1/2 -z-10 bg-gradient-to-b from-purple-100/40 via-pink-50/30 to-transparent pointer-events-none"></div>
       
       {/* Gradient accent elements */}
       <div className="absolute inset-0 -z-10 overflow-visible pointer-events-none">
         {/* Top-right corner accent gradient - repositioned to come more from the side */}
         <div className="absolute top-20 -right-60 w-[800px] h-[800px] bg-gradient-to-bl from-purple-500/50 via-pink-400/30 to-transparent rounded-full blur-3xl"></div>
         
-        {/* Bottom-left corner accent gradient - extended to reach logos section - slightly weaker */}
-        <div className="absolute -bottom-80 -left-20 w-[800px] h-[800px] bg-gradient-to-tr from-blue-400/40 via-purple-300/25 to-transparent rounded-full blur-3xl"></div>
-        
         {/* Top-left subtle gradient - extended upward - slightly weaker */}
         <div className="absolute -top-60 -left-10 w-[600px] h-[600px] bg-gradient-to-br from-purple-400/25 via-pink-300/15 to-transparent rounded-full blur-3xl"></div>
-        
-        {/* Bottom-right accent gradient - extended downward */}
-        <div className="absolute -bottom-60 right-0 w-[700px] h-[700px] bg-gradient-to-tl from-blue-300/40 via-purple-200/20 to-transparent rounded-full blur-3xl"></div>
       </div>
       
       <div className="relative w-full px-4 pt-10 pb-0 sm:px-6 sm:pt-14 md:pt-16 lg:px-8">
@@ -259,6 +253,26 @@ export default function Hero2() {
               <HeroImage />
             </div>
           </div>
+
+          {/* Video section with fade-out effect */}
+          <motion.div
+            className="relative mx-auto flex w-full items-center justify-center mt-24 pb-20"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.8, duration: 1, ease }}
+          >
+            <div className="relative w-full max-w-6xl">
+              <HeroVideoDialog
+                animationStyle="from-center"
+                videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
+                thumbnailSrc="/voyentra-dashboard.jpg"
+                thumbnailAlt="Hero Video"
+                className="border rounded-lg w-full"
+              />
+              {/* Enhanced fade-out overlay at the bottom */}
+              <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white via-white/95 via-white/80 to-transparent pointer-events-none rounded-b-lg"></div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
