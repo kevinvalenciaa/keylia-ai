@@ -60,8 +60,8 @@ export default function PricingPage() {
         <div className="flex flex-col items-center w-full max-w-7xl px-6 py-24">
           <GradientSeparator 
             width="60px"
-            gradientFrom="#8A5AFF"
-            gradientTo="#E06A9C"
+            gradientFrom="#3050cf"
+            gradientTo="#60a5fa"
             className="mb-4"
           />
           <h1 className="text-3xl md:text-5xl font-bold text-center mb-4">
@@ -78,12 +78,12 @@ export default function PricingPage() {
                 className={cn(
                   "rounded-2xl p-8 flex flex-col relative",
                   plan.highlighted
-                    ? "border-2 border-[#8A5AFF] shadow-lg"
+                    ? "border-2 border-[#3050cf] shadow-lg"
                     : "border border-gray-200"
                 )}
               >
                 {plan.highlighted && (
-                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-[#8A5AFF] to-[#E06A9C] text-white text-xs rounded-full px-4 py-1.5 font-medium flex items-center gap-1">
+                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-[#3050cf] to-[#60a5fa] text-white text-xs rounded-full px-4 py-1.5 font-medium flex items-center gap-1">
                     <Star className="h-3.5 w-3.5 fill-white" />
                     <span>Most Popular</span>
                   </div>
@@ -100,7 +100,7 @@ export default function PricingPage() {
                   className={cn(
                     "w-full py-4 px-6 rounded-xl font-semibold mb-8 transition-all duration-300",
                     plan.highlighted
-                      ? "bg-gradient-to-r from-[#8A5AFF] to-[#E06A9C] text-white hover:opacity-90"
+                      ? "bg-gradient-to-r from-[#3050cf] to-[#60a5fa] text-white hover:opacity-90"
                       : "bg-gray-100 text-gray-900 hover:bg-gray-200"
                   )}
                 >
@@ -109,7 +109,7 @@ export default function PricingPage() {
                 <ul className="space-y-4 flex-grow">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-[#8A5AFF] flex-shrink-0 mt-0.5" />
+                      <Check className="w-5 h-5 text-[#3050cf] flex-shrink-0 mt-0.5" />
                       <span className="text-gray-600">{feature}</span>
                     </li>
                   ))}

@@ -14,8 +14,8 @@ export default function FAQ() {
       <div className="flex flex-col items-center">
         <GradientSeparator 
           width="60px"
-          gradientFrom="#8A5AFF"
-          gradientTo="#E06A9C"
+          gradientFrom="#3050cf"
+          gradientTo="#60a5fa"
           className="mb-4"
         />
         <h2 className="text-3xl md:text-5xl font-bold mb-6">Frequently asked questions</h2>

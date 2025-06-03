@@ -91,8 +91,8 @@ export default function Component() {
         <GradientSeparator 
           width="80px" 
           height="4px"
-          gradientFrom="#a855f7" 
-          gradientTo="#ec4899"
+          gradientFrom="#3050cf" 
+          gradientTo="#60a5fa"
         />
       }
       subtitle="Empower Your Travel Planning with AI"

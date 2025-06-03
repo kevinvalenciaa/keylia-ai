@@ -10,8 +10,8 @@ interface GradientSeparatorProps {
 
 export function GradientSeparator({
   className,
-  gradientFrom = "#a855f7", // Default purple
-  gradientTo = "#ec4899", // Default pink
+  gradientFrom = "#3050cf", // Default navy blue
+  gradientTo = "#60a5fa", // Default light blue
   width = "100px",
   height = "4px",
 }: GradientSeparatorProps) {
